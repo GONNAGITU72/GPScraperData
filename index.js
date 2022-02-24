@@ -3,8 +3,10 @@ var gplay = require('google-play-scraper');
 var fs = require('fs');
 
 gplay.list({
+    throttle:10,
     collection: gplay.collection.TOP_PAID,
-    num: 99999
+    num: 99999,
+    page: 2
   })
   .then(value => {
     //console.log(value); // Success!
